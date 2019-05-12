@@ -2,12 +2,15 @@ package com.example.ngensdroid;
 
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -18,7 +21,7 @@ import java.util.HashMap;
 public class LoginActivity extends AppCompatActivity {
 
     EditText editTextUsername, editTextPassword;
-
+    TextView textViewRegister;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
 
         editTextUsername = (EditText) findViewById(R.id.editTextUsername);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+        textViewRegister = (TextView) findViewById(R.id.textViewRegister);
 
 
         //if user presses on login
@@ -38,12 +42,13 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         //if user presses on not registered
-        findViewById(R.id.textViewRegister).setOnClickListener(new View.OnClickListener() {
+        textViewRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //open register screen
                 finish();
-                startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
+                Intent i = new Intent((getApplicationContext()),RegisterActivity.class);
+                startActivity(i);
             }
         });
     }
@@ -109,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         //starting the profile activity
                         finish();
-                        startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     } else {
                         Toast.makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_SHORT).show();
                     }

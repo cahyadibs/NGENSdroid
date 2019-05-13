@@ -6,9 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context="com.example.ngensdroid.OrderViewActivity">
-
-
+    tools:context="com.example.ngensdroid.OrderViewTakenActivity">
 
 
     <android.support.v4.widget.SwipeRefreshLayout
@@ -16,7 +14,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/simpleSwiperRefreshLayout"
         android:theme="@style/AppTheme.AppBarOverlay">
-
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recylcerView"
@@ -27,19 +24,6 @@
 
     </android.support.v4.widget.SwipeRefreshLayout>
 
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        app:srcCompat="@drawable/ic_add_white"
-        app:fabSize="normal"
-        app:layout_anchor="@+id/simpleSwiperRefreshLayout"
-        app:layout_anchorGravity="right|bottom" />
 
 
 </android.support.design.widget.CoordinatorLayout>

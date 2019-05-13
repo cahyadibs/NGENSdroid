@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context="com.example.ngensdroid.RegisterOrder">
 
     <LinearLayout
@@ -11,49 +12,84 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/staticRegisterOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:text="Register Order"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
         <EditText
             android:id="@+id/editTextTitle"
-            android:layout_marginHorizontal="30dp"
-            android:hint="Title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:hint="Title"
+            android:padding="10dp" />
 
         <EditText
             android:id="@+id/editTextDescription"
-            android:layout_marginHorizontal="30dp"
-            android:hint="Description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:gravity="top|left"
+            android:hint="Description"
             android:inputType="textMultiLine"
             android:lines="6"
-            android:gravity="top|left"/>
+            android:padding="10dp" />
 
         <EditText
             android:id="@+id/editTextTags"
-            android:layout_marginHorizontal="30dp"
-            android:hint="Computer Type"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:hint="Computer Type"
+            android:padding="10dp" />
 
         <EditText
             android:id="@+id/editTextPrice"
-            android:layout_marginHorizontal="30dp"
-            android:hint="Budget"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:hint="Budget"
+            android:padding="10dp" />
 
         <EditText
             android:id="@+id/editTextContact"
-            android:layout_marginHorizontal="30dp"
-            android:hint="Contact"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:hint="Contact"
+            android:padding="10dp" />
 
         <Button
             android:id="@+id/buttonUploadImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:padding="10dp"
             android:text="Select Image" />
 
         <ImageView
@@ -68,6 +104,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:padding="10dp"
             android:text="Upload Order" />
 
 

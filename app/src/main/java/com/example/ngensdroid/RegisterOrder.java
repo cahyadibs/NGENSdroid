@@ -119,8 +119,7 @@ public class RegisterOrder extends AppCompatActivity {
                 }catch (Exception e){
                     e.printStackTrace();
                 }
-                Intent nextIntent = new Intent(RegisterOrder.this,OrderViewActivity.class);
-                startActivity(nextIntent);
+                finish();
             }
         });
     }

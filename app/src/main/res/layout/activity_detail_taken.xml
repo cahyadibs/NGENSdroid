@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/gradient"
-    tools:context=".DetailOrderActivity">
+    tools:context=".DetailTakenActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -182,23 +182,42 @@
         app:srcCompat="@drawable/no_image" />
 
     <Button
-        android:id="@+id/buttonTakeOrder"
+        android:id="@+id/buttonCancelOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="108dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/rounded_corner"
-        android:backgroundTint="@android:color/darker_gray"
         android:fontFamily="@font/averia_gruesa_libre"
         android:paddingHorizontal="10dp"
-        android:text="Take Order"
+        android:text="Cancel Order"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:backgroundTint="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
         app:layout_constraintStart_toEndOf="@+id/viewOrderImage"
         app:layout_constraintTop_toBottomOf="@+id/viewOrderContact" />
+
+    <Button
+        android:id="@+id/buttonFinishOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="@font/averia_gruesa_libre"
+        android:paddingHorizontal="10dp"
+        android:text="Finish Order"
+        android:textSize="18sp"
+        app:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/viewOrderImage"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCancelOrder" />
+
 </android.support.constraint.ConstraintLayout>

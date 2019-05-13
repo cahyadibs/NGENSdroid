@@ -1,6 +1,6 @@
 package com.example.ngensdroid;
 
-public class Order {
+public class OrderTaken {
     private int id;
     private String title;
     private String description;
@@ -10,8 +10,9 @@ public class Order {
     private int id_user;
     private String contact;
     private String status;
+    private int id_technician;
 
-    public Order(int id, String title, String description, String tags, String price, String image, int id_user,String contact,String status) {
+    public OrderTaken(int id, String title, String description, String tags, String price, String image, int id_user,String contact,String status,int id_technician) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -21,11 +22,10 @@ public class Order {
         this.id_user = id_user;
         this.contact = contact;
         this.status = status;
+        this.id_technician = id_technician;
     }
 
-    public int getId() {
-        return id;
-    }
+    public int getId() { return id; }
 
     public String getTitle() {
         return title;
@@ -54,4 +54,6 @@ public class Order {
     public String getContact() { return contact; }
 
     public String getStatus() { return status; }
+
+    public int getId_technician() { return id_technician; }
 }

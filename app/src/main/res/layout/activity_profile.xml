@@ -4,7 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context="com.example.ngensdroid.ProfileActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 
     <LinearLayout
@@ -14,20 +24,22 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="245dp"
-            android:layout_height="120dp"
-            android:layout_marginHorizontal="75dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
             android:layout_marginTop="100dp"
-            app:srcCompat="@drawable/logo" />
+            app:srcCompat="@drawable/ic_person_white_24dp" />
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:text="Profile"
-            android:layout_marginVertical="20dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:layout_gravity="center"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:text="User Profile"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
 
         <TableLayout
             android:layout_width="match_parent"
@@ -41,17 +53,23 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/averia_gruesa_libre"
                     android:padding="10dp"
                     android:text="Id"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/textViewId"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/averia_gruesa_libre"
                     android:padding="10dp"
                     android:text="1"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
 
             </TableRow>
 
@@ -60,17 +78,23 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/averia_gruesa_libre"
                     android:padding="10dp"
                     android:text="Username"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/textViewUsername"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/averia_gruesa_libre"
                     android:padding="10dp"
                     android:text="probelalkhan"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
 
             </TableRow>
 
@@ -79,17 +103,23 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/averia_gruesa_libre"
                     android:padding="10dp"
                     android:text="Email"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/textViewEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/averia_gruesa_libre"
                     android:padding="10dp"
                     android:text="probelalkhan@gmail.com"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
 
             </TableRow>
 
@@ -98,17 +128,23 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/averia_gruesa_libre"
                     android:padding="10dp"
                     android:text="Gender"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/textViewGender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/averia_gruesa_libre"
                     android:padding="10dp"
                     android:text="Male"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
 
             </TableRow>
 
@@ -117,8 +153,10 @@
 
         <Button
             android:id="@+id/buttonLogout"
+            android:layout_marginTop="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
             android:text="Logout"
             android:layout_gravity="center"/>
     </LinearLayout>

@@ -42,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),OrderViewIdActivity.class));
             }
         });
+
+        taken_order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),OrderViewTakenActivity.class));
+            }
+        });
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

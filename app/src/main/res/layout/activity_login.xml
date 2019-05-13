@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context="com.example.ngensdroid.LoginActivity">
 
 
@@ -22,42 +23,66 @@
             app:srcCompat="@drawable/logo" />
 
 
+        <TextView
+            android:id="@+id/staticLogin"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:gravity="center"
+            android:text="Login"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
         <EditText
             android:id="@+id/editTextUsername"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:layout_marginHorizontal="30dp"
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_corner"
             android:hint="Username"
             android:inputType="text" />
 
         <EditText
             android:id="@+id/editTextPassword"
+            android:layout_marginHorizontal="30dp"
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:fontFamily="sans-serif"
+            android:fontFamily="@font/averia_gruesa_libre"
             android:hint="Password"
             android:inputType="textPassword" />
 
         <Button
             android:id="@+id/buttonLogin"
             android:layout_width="match_parent"
+            android:layout_marginHorizontal="30dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/averia_gruesa_libre"
             android:text="Login" />
 
         <TextView
             android:id="@+id/textViewRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
+            android:fontFamily="@font/averia_gruesa_libre"
             android:text="Dont' have an account?\nRegister Here"
             android:textAlignment="center"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
 

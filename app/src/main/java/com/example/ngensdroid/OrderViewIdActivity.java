@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
@@ -37,6 +38,7 @@ public class OrderViewIdActivity extends AppCompatActivity implements OrderAdapt
     public static final String EXTRA_IMAGE = "image";
     public static final String EXTRA_ID_USER = "id_user";
     public static final String EXTRA_CONTACT= "contact";
+    public static final String EXTRA_STATUS= "status";
 
     //this is the JSON Data URL
     //make sure you are using the correct ip else it will not work
@@ -55,7 +57,8 @@ public class OrderViewIdActivity extends AppCompatActivity implements OrderAdapt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_order_view);
+        setContentView(R.layout.activity_order_view_id);
+
 
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.simpleSwiperRefreshLayout);
 
@@ -125,7 +128,8 @@ public class OrderViewIdActivity extends AppCompatActivity implements OrderAdapt
                                         product.getString("price"),
                                         product.getString("image"),
                                         product.getInt("id_user"),
-                                        product.getString("contact")
+                                        product.getString("contact"),
+                                        product.getString("status")
                                 ));
                             }
 
@@ -163,7 +167,7 @@ public class OrderViewIdActivity extends AppCompatActivity implements OrderAdapt
 
     @Override
     public void onItemClick(int position) {
-        Intent detailIntent = new Intent(this,DetailOrderActivity.class);
+        Intent detailIntent = new Intent(this,DetailIdActivity.class);
         Order clickedItem = productList.get(position);
 
         detailIntent.putExtra(EXTRA_ID,clickedItem.getId());
@@ -174,6 +178,7 @@ public class OrderViewIdActivity extends AppCompatActivity implements OrderAdapt
         detailIntent.putExtra(EXTRA_IMAGE,clickedItem.getImage());
         detailIntent.putExtra(EXTRA_ID_USER,clickedItem.getId_user());
         detailIntent.putExtra(EXTRA_CONTACT,clickedItem.getContact());
+        detailIntent.putExtra(EXTRA_STATUS,clickedItem.getStatus());
 
         startActivity(detailIntent);
     }

@@ -42,7 +42,7 @@ public class OrderViewIdActivity extends AppCompatActivity implements OrderAdapt
 
     //this is the JSON Data URL
     //make sure you are using the correct ip else it will not work
-    private static final String URL_PRODUCTS = "http://192.168.100.8/api_ngens/Order_Api_Id.php";
+    private static final String URL_PRODUCTS = "http://192.168.1.100/api_ngens/Order_Api_Id.php";
     private FloatingActionButton fab;
 
     //a list to store all the products

@@ -58,7 +58,7 @@ public class DetailOrderActivity extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        int id = intent.getIntExtra(EXTRA_ID,0);
+        final int id = intent.getIntExtra(EXTRA_ID,0);
         String title = intent.getStringExtra(EXTRA_TITLE);
         String description = intent.getStringExtra(EXTRA_DESCRIPTION);
         String tags = intent.getStringExtra(EXTRA_TAGS);
@@ -112,7 +112,7 @@ public class DetailOrderActivity extends AppCompatActivity {
                     {
                         Map<String, String>  params = new HashMap<String, String>();
                         params.put("status", "Ongoing");
-                        params.put("id",String.valueOf(EXTRA_ID));
+                        params.put("id",String.valueOf(id));
                         return params;
                     }
                 };
@@ -141,7 +141,7 @@ public class DetailOrderActivity extends AppCompatActivity {
                     {
                         Map<String, String>  params = new HashMap<String, String>();
                         params.put("id_technician", String.valueOf(user.getId()));
-                        params.put("id_order",String.valueOf(EXTRA_ID));
+                        params.put("id_order",String.valueOf(id));
                         return params;
                     }
                 };

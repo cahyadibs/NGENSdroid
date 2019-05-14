@@ -49,7 +49,7 @@ public class DetailTakenActivity extends AppCompatActivity {
         });
 
         Intent intent = getIntent();
-        int id = intent.getIntExtra(EXTRA_ID,0);
+        final int id = intent.getIntExtra(EXTRA_ID,0);
         String title = intent.getStringExtra(EXTRA_TITLE);
         String description = intent.getStringExtra(EXTRA_DESCRIPTION);
         String tags = intent.getStringExtra(EXTRA_TAGS);
@@ -104,7 +104,7 @@ public class DetailTakenActivity extends AppCompatActivity {
                     {
                         Map<String, String>  params = new HashMap<String, String>();
                         params.put("status", "Open Order");
-                        params.put("id",String.valueOf(EXTRA_ID));
+                        params.put("id",String.valueOf(id));
                         return params;
                     }
                 };
@@ -132,7 +132,7 @@ public class DetailTakenActivity extends AppCompatActivity {
                     protected Map<String, String> getParams()
                     {
                         Map<String, String>  params = new HashMap<String, String>();
-                        params.put("id_order",String.valueOf(EXTRA_ID));
+                        params.put("id_order",String.valueOf(id));
                         return params;
                     }
                 };
@@ -169,7 +169,7 @@ public class DetailTakenActivity extends AppCompatActivity {
                     {
                         Map<String, String>  params = new HashMap<String, String>();
                         params.put("status", "Finished");
-                        params.put("id",String.valueOf(EXTRA_ID));
+                        params.put("id",String.valueOf(id));
                         return params;
                     }
                 };
@@ -197,7 +197,7 @@ public class DetailTakenActivity extends AppCompatActivity {
                     protected Map<String, String> getParams()
                     {
                         Map<String, String>  params = new HashMap<String, String>();
-                        params.put("id_order",String.valueOf(EXTRA_ID));
+                        params.put("id_order",String.valueOf(id));
                         return params;
                     }
                 };
